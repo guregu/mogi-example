@@ -18,7 +18,7 @@ func TestGetBeer(t *testing.T) {
 	defer mogi.Reset()
 	mogi.Select("id", "name", "pct").
 		From("beer").
-		Where("id", 42).
+		Where("id", 1).
 		StubCSV(`42,Yona Yona Ale,5.5`)
 
 	beer, err := GetBeer(42)
